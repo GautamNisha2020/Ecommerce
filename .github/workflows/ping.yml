@@ -1,0 +1,14 @@
+name: Keep Backend Awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # Runs every 10 minutes
+  workflow_dispatch:       # Optional: allows manual trigger
+
+jobs:
+  ping-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send ping to backend
+        run: curl -s https://ecommerce-b4ax.onrender.com > /dev/null

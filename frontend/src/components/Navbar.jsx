@@ -5,6 +5,7 @@ import { ShopContext } from "../context/ShopContext";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const ADMIN_URL=import.meta.env.VITE_ADMIN_URL;
+  console.log("Admin:", ADMIN_URL);
   const {
     setShowSearch,
     getCartCount,
